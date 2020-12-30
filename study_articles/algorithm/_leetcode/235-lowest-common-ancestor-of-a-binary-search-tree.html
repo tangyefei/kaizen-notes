@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let root = new TreeNode(6);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(8);
+    root.left.left = new TreeNode(0);
+    root.left.right = new TreeNode(4);
+    root.right.left = new TreeNode(7);
+    root.right.right = new TreeNode(9);
+    root.left.right.left = new TreeNode(3);
+    root.left.right.right = new TreeNode(5);
+    LOWEST-COMMON-ANCESTOR-OF-A-BINARY-SEARCH-TREE
+
+    /**
+     * @param {TreeNode} root
+     * @param {TreeNode} p
+     * @param {TreeNode} q
+     * @return {TreeNode}
+     * function TreeNode(val) {
+     *     this.val = val;
+     *     this.left = this.right = null;
+     * }
+     */
+    var lowestCommonAncestor = function(root, p, q) {
+      let rv = root.val, pv = p.val, qv = q.val;
+      if(rv > pv && rv > qv) {
+        return lowestCommonAncestor(root.left, p, q);
+      } else if(rv < pv && rv < qv) {
+        return lowestCommonAncestor(root.right, p, q);
+      } else {
+        return root.val;
+      }
+    }
+    console.log(lowestCommonAncestor(root, 2, 8)); //expected 6
+    console.log(lowestCommonAncestor(root, 2, 4)); //expected 2
+    console.log(lowestCommonAncestor(root, 0, 5)); //expected 2
+    </script>
+</body>
+</html>

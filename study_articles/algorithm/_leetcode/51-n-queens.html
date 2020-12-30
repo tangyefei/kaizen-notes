@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+   /**
+    * @param {number} n
+    * @return {string[][]}
+    */
+    var solveNQueens = function(n) {
+      // speed > 78.68%, memory < 100%
+      var cols = [], pie = [], la = [];
+      var result = [];
+      function nthQueue(level, match) {
+        if(level === n) result.push(match);
+        for (let i = 0; i < n; i++) {
+          if(cols.indexOf(i) === -1 && pie.indexOf(level + i) === -1 && la.indexOf(level - i) === -1) {
+            cols.push(i);
+            pie.push(level + i);
+            la.push(level - i);
+            nthQueue(level + 1, [...match, i])
+            cols.pop();
+            pie.pop();
+            la.pop();
+          }
+        }
+      } 
+      nthQueue(0, []);
+      return result.map(d => {
+        return d.map(dd => {
+          let s = '';
+          for(let i = 0; i < n; i++) {
+            s += ((i == dd) ? 'Q' : '.')
+          }
+          return s;
+        })
+      })
+    }
+
+    var start = (new Date()).getTime();
+    console.log(solveNQueens(4));
+    var end = (new Date()).getTime();
+    console.log((end - start)/1000);
+    console.log(JSON.stringify(solveNQueens(4))=='[[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]');
+  </script>
+  
+</body>
+</html>

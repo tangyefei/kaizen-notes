@@ -173,7 +173,7 @@ if(typeof val === 'object') {
 
 本章介绍的所有概念的集合到图解
 
-![图解](./chapter2.png)
+![图解](https://kaizen-notes.oss-cn-beijing.aliyuncs.com/chapter2.png)
 
 10月24日复习：
 
@@ -184,7 +184,7 @@ if(typeof val === 'object') {
 5. Observer是一个入口，具体做的是defineReactive的动作，因为属性可能又是对象，所以还会递归地进行构建Observer的动作
 
 
-![图解](./chapter2-graphic.jpeg)
+![图解](https://kaizen-notes.oss-cn-beijing.aliyuncs.com/chapter2-graphic.jpeg)
 
 
 

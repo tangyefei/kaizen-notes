@@ -174,6 +174,6 @@ this.list[0] = 2;
 
 #### 13. 总结
 
-![图解](./chapter3-graphic.jpeg)
+![图解](https://kaizen-notes.oss-cn-beijing.aliyuncs.com/chapter3-graphic.jpeg)
 
 

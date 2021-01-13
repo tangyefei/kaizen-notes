@@ -94,7 +94,7 @@ undefined用于表示更深层的未定义的”空值“，它是预定义的�
 
 下标简要说明了JavaScript中如何进行类型转换
 
-![type-transfer.png](./type-transfer.png);
+![type-transfer.png](https://kaizen-notes.oss-cn-beijing.aliyuncs.com/type-transfer.png);
 
 原始值->原始值，原始值->对象 都比较好理解，但注意一点，当JavaScript期望一个类型的时候，转换会发生（比如`+`和`*`），但一个值转换为另一个值并不意味着两个值相等，在期望使用布尔值的地方使用了undefined，它将会转换为false，但不表明 undefined == false。在某些场合下为了代码清晰易读，我们会进行显示转化，在不使用new运算符的时候，Boolean()、Number()、String()、Object()会作为转换函数做类型转换。
 

@@ -25,7 +25,7 @@
 - （3）浏览器和实现原理和API
 - （4）实践中遇到的问题和解决方案
 
-![structure](./structure.jpeg)
+![structure](https://kaizen-notes.oss-cn-beijing.aliyuncs.com/structure.jpeg)
 
 
 ### 讲解方法
@@ -145,7 +145,7 @@ JavaScript在语言设计上试图模糊对象和基本类型之间的关系，�
 
 类型转换很多是符合直觉的，但也有一些几乎不可能记得住的部分，比如 `==` 的用法，因此很多实践要求禁止使用 `==`，而是显式地进行类型转换以后，用 `===` 进行比较。
 
-![convert](./convert.jpeg)
+![convert](https://kaizen-notes.oss-cn-beijing.aliyuncs.com/convert.jpeg)
 
 转换中比较复杂的部分有：
 
@@ -187,7 +187,7 @@ JavaScript在语言设计上试图模糊对象和基本类型之间的关系，�
 - 普通对象，通过{}、class、Object构造器所定义的对象
 
 
-![固有对象](./intrinsic.jpeg)
+![固有对象](https://kaizen-notes.oss-cn-beijing.aliyuncs.com/intrinsic.jpeg)
 	
 作者在后文又引入了俩概念：函数对象和构造器对象。分别是能通过call调用和具有私有字段construct的对象。用function关键字定义出来的函数两者都符合，不过行为却并不相同。
 

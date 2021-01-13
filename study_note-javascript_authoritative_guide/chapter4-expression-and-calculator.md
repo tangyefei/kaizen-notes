@@ -58,7 +58,7 @@ new Date
 
 ## 4.7 运算符概述
 
-![calculator](./images/calculator.png)
+![calculator](https://kaizen-notes.oss-cn-beijing.aliyuncs.com/calculator.png)
 
 #### 结合性
 

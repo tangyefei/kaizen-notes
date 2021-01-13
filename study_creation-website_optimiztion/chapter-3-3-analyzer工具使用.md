@@ -1,8 +1,4 @@
-# 2.4 关键渲染路径的优化实践
-
-
-
-## 优化资源大小
+# 2.4 analyzer工具使用
 
 webpack-bundle-analyzer是一个工具，使用它我们可以打包项目的过程，将打包结果输出到它的配置文件中，然后在用可伸缩的区块来展示依赖资源的大小。
 
@@ -11,17 +7,17 @@ webpack-bundle-analyzer是一个工具，使用它我们可以打包项目的过
 
 webpack-bundle-analyzer的简单使用为：
 
-### 1. 安装 
+## 1. 安装
 
 ```
 $ npm i -D webpack-bundle-analyzer
 ```
 
-### 2. 增加配置文件 
+## 2. 增加配置文件
 
 配置完全拷贝自己项目的一份配置命名为`webpack.generate.js`即可。
 
-### 3. 配置 package.json
+## 3. 配置 package.json
 
 ```
 {
@@ -32,7 +28,7 @@ $ npm i -D webpack-bundle-analyzer
 }
 ```
 
-### 4. 依次执行命令
+## 4. 依次执行命令
 
 ```
 $ npm run generate

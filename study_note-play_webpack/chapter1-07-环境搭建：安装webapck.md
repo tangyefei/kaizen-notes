@@ -12,3 +12,10 @@
 $ npm init
 $ npm i webpack webpack-cli -D
 ```
+
+更新：考虑到后续webpack版本升级到5，要沿用本课程学习需要指定版本，可以将下述配置拷贝到pacakge.json中
+
+```
+  "webpack": "^4.42.0",
+  "webpack-cli": "^3.3.11",
+```

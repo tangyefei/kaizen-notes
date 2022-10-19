@@ -30,11 +30,25 @@ output: {
 注：`:8`代表只截取hash值的前8位
 
 
-它的问题在于，两个entry打包出来的文件hash是相同的，只要任何一个依赖的资源变化，两个hash值都会发生变化。
+举例上述例子输出的文件为
+```
+
+ index_7d5fba6a.js   1.07 KiB       0  [emitted] [immutable]  index
+search_7d5fba6a.js   1.08 KiB       1  [emitted] [immutable]  search
+```
+
+它的问题在于，两个entry打包出来的文件hash是相同的，只要任何一个entry或它的依赖，所有entry导出的chunk的hash值都会发生变化。
 
 #### chunkhash
 
+注：chunkhash 和 contenthash 都不能和热更新一起使用（热更新是为了方便本地调试使用过的插件，在生产环境是不会有的），即要将插件中的这一行注释掉
+
+```
+// new webpack.HotModuleReplacementPlugin(), // 使用chunhash时需要关闭
+```
+
 和打包的chunk有关，不同的entry有不同的chunkhash值。它能避免一个chunk改变而重新给另一个chunk新的指纹。
+仍旧是上述例子，如果修改 search.js 只会改变search有关的chunk的hash值，而不会影响到index有关的chunk的hash值。
 
 #### contenthash
 

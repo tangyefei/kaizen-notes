@@ -11,4 +11,4 @@
 	"webpack": "webpack"
 },
 ```
-`npm run webpack`即可执行构建
+`npm run webpack`即可执行构建，然后启动自己按转的web服务器即可查看效果（例如 `http-server`)

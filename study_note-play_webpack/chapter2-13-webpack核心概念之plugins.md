@@ -35,6 +35,13 @@
 
 ```
 
+
+同样为了，通过修改配置文件的方式来安装老版本：
+
+```
+   "html-webpack-plugin": "^4.5.0",
+```
+
 然后在webpack.config.js中增加插件配置：
 ```
 const HtmlWebpackPlugin = require('html-webpack-plugin')

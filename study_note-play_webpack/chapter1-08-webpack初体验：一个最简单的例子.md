@@ -22,7 +22,7 @@ export function helloworld() {
 }
 ```
 
-配置文件 
+配置文件（注：配置文件默认在根目录下，该目录需要--config指定）
 
 ```
 // webpack.config.js
@@ -60,4 +60,6 @@ module.exports = {
 ```
 
 运行命令 `node_modules/.bin/webpack`，然后用浏览器打开 dist/index.html  可以看到内容被输出到了文档中。
+
+注：这里只演示打包成bundle.js，html对bundle.js的引用是提前加载好的，后续的内容会介绍如何将js注入到html模板中。
 

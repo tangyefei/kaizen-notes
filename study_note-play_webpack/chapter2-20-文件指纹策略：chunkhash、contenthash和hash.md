@@ -41,14 +41,15 @@ search_7d5fba6a.js   1.08 KiB       1  [emitted] [immutable]  search
 
 #### chunkhash
 
+和打包的chunk有关，不同的entry有不同的chunkhash值。它能避免一个chunk改变而重新给另一个chunk新的指纹。
+
+仍旧是上述例子，如果修改 search.js 只会改变search有关的chunk的hash值，而不会影响到index有关的chunk的hash值。
+
 注：chunkhash 和 contenthash 都不能和热更新一起使用（热更新是为了方便本地调试使用过的插件，在生产环境是不会有的），即要将插件中的这一行注释掉
 
 ```
 // new webpack.HotModuleReplacementPlugin(), // 使用chunhash时需要关闭
 ```
-
-和打包的chunk有关，不同的entry有不同的chunkhash值。它能避免一个chunk改变而重新给另一个chunk新的指纹。
-仍旧是上述例子，如果修改 search.js 只会改变search有关的chunk的hash值，而不会影响到index有关的chunk的hash值。
 
 #### contenthash
 
